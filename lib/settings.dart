@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'globals.dart' as globals;
 
 
-class SettingsState extends ChangeNotifier{
+class SettingsState extends ChangeNotifier{       //notifier
 
 
 
@@ -29,7 +29,7 @@ class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final SettingsState state = SettingsState();
+    final SettingsState state = SettingsState(); // notifier declaration
     
     return Scaffold(
       backgroundColor: Color.fromARGB(129, 255, 127, 42),

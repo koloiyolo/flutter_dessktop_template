@@ -12,7 +12,9 @@ You can use that as template for an application and implement your functionaliti
 
 
     add Light/Dark mode support
-    add Settings page 
+    --add-- finish Settings page
+    learn how to use ChangeNotifier and ChangeNotifierProvider
+
 
 
     

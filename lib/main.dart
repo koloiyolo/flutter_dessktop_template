@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dessktop_template/settings.dart';
+import 'package:provider/provider.dart';
 import 'globals.dart' as globals;
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SettingsState(),                                                //notifier provider
+      child: const MyApp(),
+    ),
+  );
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
