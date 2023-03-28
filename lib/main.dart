@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: 
         ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
       ),
-      themeMode: globals.thememode,
+      themeMode: ThemeMode.light,
       home: const NavBar()
     );
   }
@@ -84,7 +84,7 @@ class _NavBarState extends State<NavBar> {
       body: Row(
         children: [
           NavigationRail(
-            backgroundColor: const Color.fromARGB(60, 189, 82, 39),
+            backgroundColor: Color.fromARGB(255, 255, 255, 255),
             extended: true,
             minExtendedWidth: 170,
             destinations:[

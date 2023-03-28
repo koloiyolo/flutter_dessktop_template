@@ -32,7 +32,7 @@ class Settings extends StatelessWidget {
     final SettingsState state = SettingsState();
     
     return Scaffold(
-      backgroundColor: Color.fromARGB(114, 255, 72, 0),
+      backgroundColor: Color.fromARGB(129, 255, 127, 42),
       body: Column(
         children: [
           Padding(
