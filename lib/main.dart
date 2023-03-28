@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dessktop_template/settings.dart';
 import 'globals.dart' as globals;
 
 
@@ -17,12 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: 
-        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 108, 242, 106))
+        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 189, 82, 39))
       ),
       darkTheme: ThemeData(
         useMaterial3: true,
         colorScheme: 
-        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 70, 13, 94))
+        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 189, 82, 39))
       ),
       themeMode: globals.thememode,
       home: const NavBar()
@@ -62,7 +63,7 @@ class _NavBarState extends State<NavBar> {
         lastSelected = 2;
       break;
       case 3: 
-        page = const Placeholder();
+        page = const SettingsState();
         lastSelected = 3;
       break;
       case 4:
@@ -83,7 +84,7 @@ class _NavBarState extends State<NavBar> {
       body: Row(
         children: [
           NavigationRail(
-            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+            backgroundColor: const Color.fromARGB(60, 189, 82, 39),
             extended: true,
             minExtendedWidth: 170,
             destinations:[
