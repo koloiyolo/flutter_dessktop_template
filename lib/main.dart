@@ -98,6 +98,12 @@ class _NavBarState extends State<NavBar> {
               index = value;});
             
           },),
+          Expanded(
+          child: Container(
+            color: Theme.of(context).colorScheme.tertiary,
+            child: page,
+          )
+        )
         ],
       )
     );
