@@ -1,14 +1,38 @@
+
+
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
+import 'globals.dart' as globals;
 
-class SettingsState extends StatelessWidget {
-  const SettingsState({super.key});
 
+class SettingsState extends ChangeNotifier{
+
+
+
+
+  //Text Size options
+  void setTextSmall(){
+    globals.textSize=17.0;
+    notifyListeners();
+  }
+  void setTextLarge(){
+    globals.textSize=30.0;
+    notifyListeners();
+  }
+}
+
+
+class Settings extends StatelessWidget {
+  const Settings({super.key});
+  
   @override
   Widget build(BuildContext context) {
+    
+    final SettingsState state = SettingsState();
+    
     return Scaffold(
-      backgroundColor: Color.fromARGB(181, 242, 117, 68),
+      backgroundColor: Color.fromARGB(114, 255, 72, 0),
       body: Column(
         children: [
           Padding(
@@ -16,11 +40,11 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 1'),
+                Text('Option 1', style:TextStyle(fontSize: globals.textSize, color: Colors.white)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text(' Toggle'),
+                  child: Text(' Toggle',  style:TextStyle(fontSize: globals.textSize)  ),
                 ),
               ],
             ),
@@ -30,11 +54,11 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 2'),
+                Text('Option 2', style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text(' Toggle'),
+                  child: Text(' Toggle',  style:TextStyle(fontSize: globals.textSize)  ),
                 ),
               ],
             ),
@@ -44,11 +68,12 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 3'),
+                Text('Option 3', 
+                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text(' Toggle'),
+                  child: Text(' Toggle',style:TextStyle(fontSize: globals.textSize)  ),
                 ),
               ],
             ),
@@ -58,11 +83,13 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 4'),
+                Text('Option 4',
+                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text(' Toggle'),
+                  child: Text(' Toggle', 
+                  style:TextStyle(fontSize: globals.textSize)  ),
                 ),
               ],
             ),
@@ -72,11 +99,13 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 5'),
+                Text('Option 5', 
+                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
-                  child: const Text(' Toggle'),
+                  child: Text(' Toggle', 
+                  style:TextStyle(fontSize: globals.textSize)  ),
                 ),
               ],
             ),
@@ -86,18 +115,23 @@ class SettingsState extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text('Option 6'),
+                Text('Text Size', 
+                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
                 const SizedBox(width: 30),
                 Row(
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
-                      child: const Text(' Toggle'),
+                      onPressed: () {
+                        state.setTextSmall();
+                      },
+                      child: Text('Small', style:TextStyle(fontSize: globals.textSize)  ),
                     ),
                     const SizedBox(width: 5),
                     ElevatedButton(
-                      onPressed: () {},
-                      child: const Text(' Toggle'),
+                      onPressed: () {
+                        state.setTextLarge();
+                      },
+                      child: Text('Big', style:TextStyle(fontSize: globals.textSize)  ),
                     ),
                   ],
                 ),

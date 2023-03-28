@@ -18,12 +18,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: 
-        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 189, 82, 39))
+        ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
       ),
       darkTheme: ThemeData(
         useMaterial3: true,
         colorScheme: 
-        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 189, 82, 39))
+        ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
       ),
       themeMode: globals.thememode,
       home: const NavBar()
@@ -63,7 +63,7 @@ class _NavBarState extends State<NavBar> {
         lastSelected = 2;
       break;
       case 3: 
-        page = const SettingsState();
+        page = const Settings();
         lastSelected = 3;
       break;
       case 4:
@@ -125,3 +125,4 @@ class _NavBarState extends State<NavBar> {
     );
   }
 }
+
