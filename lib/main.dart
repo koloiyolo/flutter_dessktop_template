@@ -71,20 +71,22 @@ class _NavBarState extends State<NavBar> {
       body: Row(
         children: [
           NavigationRail(
+            extended: true,
+            minExtendedWidth: 170,
             destinations:[
-              NavigationRailDestination(
+              const NavigationRailDestination(
                 icon: Icon(Icons.home), 
                 label: Text('Main Page')),
 
-              NavigationRailDestination(
+              const NavigationRailDestination(
                 icon: Icon(Icons.add), 
                 label: Text('Add')),
               
-              NavigationRailDestination(
+              const NavigationRailDestination(
                 icon: Icon(Icons.edit), 
                 label: Text('Edit')),
               
-              NavigationRailDestination(
+              const NavigationRailDestination(
                 icon: Icon(Icons.settings), 
                 label: Text('Settings')),
 
