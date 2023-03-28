@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'globals.dart' as globals;
+
 
 void main() {
   runApp(const MyApp());
@@ -6,13 +8,23 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+  
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
+        useMaterial3: true,
+        colorScheme: 
+        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 108, 242, 106))
       ),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: 
+        ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 70, 13, 94))
+      ),
+      themeMode: globals.thememode,
       home: const NavBar()
     );
   }
@@ -28,40 +40,40 @@ class NavBar extends StatefulWidget {
 
 class _NavBarState extends State<NavBar> {
   int lastSelected= 0;
-  int dark_mode_toggle = 0;
+  int darkModeToggle = 0;
   int index = 0;
-  Icon darkLightModeIcon = Icon(Icons.dark_mode);
-  Text darkLightModeText = Text('Dark Mode');
+  Icon darkLightModeIcon = const Icon(Icons.dark_mode);
+  Text darkLightModeText = const Text('Dark Mode');
   @override
   Widget build(BuildContext context) {
 
-    Widget page = Placeholder();
+    Widget page = const Placeholder();
     switch(index){
       case 0: 
-        page = Placeholder();
+        page = const Placeholder();
         lastSelected = 0;
       break;
       case 1: 
-        page = Placeholder();
+        page = const Placeholder();
         lastSelected = 1;
       break;
       case 2:
-        page = Placeholder();
+        page = const Placeholder();
         lastSelected = 2;
       break;
       case 3: 
-        page = Placeholder();
+        page = const Placeholder();
         lastSelected = 3;
       break;
       case 4:
-        if(dark_mode_toggle==0){
-          darkLightModeIcon = Icon(Icons.light_mode);
-          darkLightModeText = Text('Light Mode');
-          dark_mode_toggle = 1;
+        if(darkModeToggle==0){
+          darkLightModeIcon = const Icon(Icons.light_mode);
+          darkLightModeText = const Text('Light Mode');
+          darkModeToggle = 1;
           }else{
-            darkLightModeIcon = Icon(Icons.dark_mode);
-            darkLightModeText = Text('Dark Mode');
-            dark_mode_toggle = 0;
+            darkLightModeIcon = const Icon(Icons.dark_mode);
+            darkLightModeText = const Text('Dark Mode');
+            darkModeToggle = 0;
           } 
         
       break;
@@ -71,6 +83,7 @@ class _NavBarState extends State<NavBar> {
       body: Row(
         children: [
           NavigationRail(
+            backgroundColor: const Color.fromARGB(255, 255, 255, 255),
             extended: true,
             minExtendedWidth: 170,
             destinations:[
