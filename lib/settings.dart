@@ -6,30 +6,18 @@ import 'package:flutter/material.dart';
 import 'globals.dart' as globals;
 
 
-class SettingsState extends ChangeNotifier{       //notifier
 
+class Settings extends StatefulWidget {
+  const Settings({super.key});
 
-
-
-  //Text Size options
-  void setTextSmall(){
-    globals.textSize=17.0;
-    notifyListeners();
-  }
-  void setTextLarge(){
-    globals.textSize=30.0;
-    notifyListeners();
-  }
+  @override
+  State<Settings> createState() => _SettingsState();
 }
 
-
-class Settings extends StatelessWidget {
-  const Settings({super.key});
-  
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     
-    final SettingsState state = SettingsState(); // notifier declaration
     
     return Scaffold(
       backgroundColor: Color.fromARGB(129, 255, 127, 42),
@@ -122,14 +110,18 @@ class Settings extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        state.setTextSmall();
+                        setState(() {
+                          globals.textSize = 17.0;
+                        });;
                       },
                       child: Text('Small', style:TextStyle(fontSize: globals.textSize)  ),
                     ),
                     const SizedBox(width: 5),
                     ElevatedButton(
                       onPressed: () {
-                        state.setTextLarge();
+                        setState(() {
+                          globals.textSize = 30;
+                        });
                       },
                       child: Text('Big', style:TextStyle(fontSize: globals.textSize)  ),
                     ),

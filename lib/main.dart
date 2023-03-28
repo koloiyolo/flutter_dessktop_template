@@ -6,10 +6,7 @@ import 'globals.dart' as globals;
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => SettingsState(),                                                //notifier provider
-      child: const MyApp(),
-    ),
+     const MyApp(),
   );
 }
 
@@ -21,20 +18,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: 
-        ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
-      ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: 
-        ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
-      ),
-      themeMode: ThemeMode.light,
-      home: const NavBar()
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: 
+          ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
+        ),
+        darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: 
+          ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
+        ),
+        themeMode: ThemeMode.light,
+        home: const NavBar()
+      );
+    
   }
 }
 
