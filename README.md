@@ -1,8 +1,10 @@
 # flutter_dessktop_template
 
-Simple desktop application template writtien in Dart using flutter framework
+Simple desktop application template writtien in Dart using flutter framework.
 
-This is my entry point to frontend, and I have chosen flutter because it let's you develop for many platforms at once
+This is my entry point to frontend, and I have chosen flutter because it let's you develop for many platforms at once.
+
+You can use that as template for application and implement your functionalities in empty functions.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
