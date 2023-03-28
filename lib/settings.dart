@@ -20,7 +20,7 @@ class _SettingsState extends State<Settings> {
     
     
     return Scaffold(
-      backgroundColor: Color.fromARGB(129, 255, 127, 42),
+      backgroundColor: globals.backgroundColor,
       body: Column(
         children: [
           Padding(

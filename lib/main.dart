@@ -22,12 +22,12 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: 
-          ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
+          ColorScheme.fromSeed(seedColor: globals.seedColor)
         ),
         darkTheme: ThemeData(
           useMaterial3: true,
           colorScheme: 
-          ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 189, 82, 39))
+          ColorScheme.fromSeed(seedColor: globals.seedColor)
         ),
         themeMode: ThemeMode.light,
         home: const NavBar()
