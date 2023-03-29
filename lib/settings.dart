@@ -28,7 +28,9 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Option 1', style:TextStyle(fontSize: globals.textSize, color: Colors.white)),
+                Text('Option 1', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
@@ -42,7 +44,9 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Option 2', style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
+                Text('Option 2', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
@@ -56,8 +60,9 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Option 3', 
-                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
+                Text('Option 3', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
@@ -71,8 +76,9 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Option 4',
-                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
+               Text('Option 4', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
@@ -87,8 +93,9 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Option 5', 
-                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
+               Text('Option 5', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 ElevatedButton(
                   onPressed: () {},
@@ -103,12 +110,14 @@ class _SettingsPageState extends State<SettingsPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Text Size', 
-                style:TextStyle(fontSize: globals.textSize, color: Colors.white)  ),
+                Text('Text Size', style:TextStyle(
+                  fontSize: globals.textSize, 
+                  color: globals.textColor)),
                 const SizedBox(width: 30),
                 Row(
                   children: [
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: globals.buttonColor), //<====== Working on that rn
                       onPressed: () {
                         setState(() {
                           globals.textSize = 17.0;
