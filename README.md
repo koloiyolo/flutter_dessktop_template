@@ -6,10 +6,10 @@ This is my entry point to frontend, and I have chosen flutter because it let's y
 
 You can use that as template for an application and implement your functionalities in empty functions.
 
-##Light Mode
+## Light Mode
 ![image](https://user-images.githubusercontent.com/23361087/228574414-a9056887-66e7-41cf-959b-2bbb2d883a06.png)
 
-##Dark Mode
+## Dark Mode
 ![image](https://user-images.githubusercontent.com/23361087/228574554-cbbe352f-8d57-4673-9a9b-c9a91af8c8a9.png)
 
 
