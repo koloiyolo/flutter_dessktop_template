@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dessktop_template/add.dart';
+import 'package:flutter_dessktop_template/edit.dart';
+import 'package:flutter_dessktop_template/home.dart';
 import 'package:flutter_dessktop_template/settings.dart';
 import 'package:provider/provider.dart';
 import 'globals.dart' as globals;
@@ -53,22 +56,22 @@ class _NavBarState extends State<NavBar> {
   @override
   Widget build(BuildContext context) {
 
-    Widget page = const Placeholder();
+    Widget page = const HomePage();
     switch(index){
       case 0: 
-        page = const Placeholder();
+        page = const HomePage();
         lastSelected = 0;
       break;
       case 1: 
-        page = const Placeholder();
+        page = const AddPage();
         lastSelected = 1;
       break;
       case 2:
-        page = const Placeholder();
+        page = const EditPage();
         lastSelected = 2;
       break;
       case 3: 
-        page = const Settings();
+        page = const SettingsPage();
         lastSelected = 3;
       break;
       case 4:
@@ -76,10 +79,14 @@ class _NavBarState extends State<NavBar> {
           darkLightModeIcon = const Icon(Icons.light_mode);
           darkLightModeText = const Text('Light Mode');
           darkModeToggle = 1;
+          globals.seedColor = globals.darkModeSeed;
+          globals.backgroundColor = globals.darkModeBackground;
           }else{
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
             darkModeToggle = 0;
+            globals.seedColor = globals.lightModeSeed;
+            globals.backgroundColor=globals.lightModeBackground;
           } 
         
       break;
