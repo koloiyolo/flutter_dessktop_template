@@ -37,6 +37,6 @@ var navColor = Color.fromARGB(255, 255, 255, 255);
 var navIconColor = Color.fromARGB(255, 67, 67, 67);
 var selectedNavButtonColor = Color.fromARGB(255, 210, 210, 210);
 var textColor =Color.fromARGB(255, 0, 0, 0);
-var buttonColor = Color.fromARGB(255, 115, 115, 115);
+var buttonColor = Color.fromARGB(255, 130, 130, 130);
 var buttonTextColor = Color.fromARGB(255, 255, 255, 255);
 var cardColor = Color.fromARGB(255, 245, 245, 245);
