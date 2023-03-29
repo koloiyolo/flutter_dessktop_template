@@ -48,31 +48,29 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int lastSelected= 0;
   int darkModeToggle = 0;
-  int index = 0;
   Icon darkLightModeIcon = const Icon(Icons.dark_mode);
   Text darkLightModeText = const Text('Dark Mode');
   @override
   Widget build(BuildContext context) {
 
     Widget page = const HomePage();
-    switch(index){
+    switch(globals.index){
       case 0: 
         page = const HomePage();
-        lastSelected = 0;
+        globals.lastIndex = 0;
       break;
       case 1: 
         page = const AddPage();
-        lastSelected = 1;
+        globals.lastIndex = 1;
       break;
       case 2:
         page = const EditPage();
-        lastSelected = 2;
+        globals.lastIndex = 2;
       break;
       case 3: 
         page = const SettingsPage();
-        lastSelected = 3;
+        globals.lastIndex = 3;
       break;
       case 4:
         if(darkModeToggle==0){
@@ -133,10 +131,10 @@ class _NavBarState extends State<NavBar> {
                 icon: darkLightModeIcon, 
                 label: darkLightModeText),
             ], 
-          selectedIndex: lastSelected,
+          selectedIndex: globals.lastIndex,
           onDestinationSelected: (value){
             setState(() {
-              index = value;});
+              globals.index = value;});
             
           },),
           Expanded(

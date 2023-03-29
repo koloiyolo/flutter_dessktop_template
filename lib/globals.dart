@@ -7,23 +7,26 @@ import 'package:flutter/material.dart';
 //LightMode
 var thememode = ThemeMode.light;
 var textSize = 17.0; // small
+//navBar indexes
+var lastIndex = 0;
+var index = 0;
 
 //lightMode
 var lightModeSeed = const Color.fromARGB(255, 189, 82, 39);
-var lightModeBackground = const Color.fromARGB(129, 255, 127, 42);
-var lightNavColor = const Color.fromARGB(255, 255, 255, 255);
+var lightModeBackground = const Color.fromARGB(255, 255, 255, 255);
+var lightNavColor = const Color.fromARGB(255, 235, 235, 235);
 var lightNavIconColor = const Color.fromARGB(255, 67, 67, 67);
-var lightSelectedNavButtonColor = const Color.fromARGB(255, 210, 210, 210);
+var lightSelectedNavButtonColor = const Color.fromARGB(255, 200, 200, 200);
 
 //darkMode
 var darkModeSeed = const Color.fromARGB(255, 189, 82, 39);
-var darkModeBackground = const Color.fromARGB(129, 255, 127, 42);
+var darkModeBackground = const Color.fromARGB(255, 100, 100, 100);
 var darkNavColor = const Color.fromARGB(255, 67, 67, 67);
 var darkNavIconColor = const Color.fromARGB(255, 255, 255, 255);
 var darkSelectedNavButtonColor = const Color.fromARGB(255, 100, 100, 100);
 
 //Mode vars
-var backgroundColor = Color.fromARGB(129, 255, 127, 42);
+var backgroundColor = Color.fromARGB(255, 255, 255, 255);
 var seedColor =Color.fromARGB(255, 189, 82, 39);
 var navColor = Color.fromARGB(255, 255, 255, 255);
 var navIconColor = Color.fromARGB(255, 67, 67, 67);

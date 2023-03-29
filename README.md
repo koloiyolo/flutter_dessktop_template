@@ -14,6 +14,7 @@ You can use that as template for an application and implement your functionaliti
     add Light/Dark mode support
     --add-- finish Settings page
     learn how to use ChangeNotifier and ChangeNotifierProvider
+    fix issue with color changing and resetti page to default 
 
 
 
