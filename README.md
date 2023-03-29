@@ -5,7 +5,13 @@ Simple desktop application template writtien in Dart using flutter framework.
 This is my entry point to frontend, and I have chosen flutter because it let's you develop for many platforms at once.
 
 You can use that as template for an application and implement your functionalities in empty functions.
-![image](https://user-images.githubusercontent.com/23361087/228298849-a7b994f5-8373-4f05-99bc-89cb71fac0e0.png)
+
+##Light Mode
+![image](https://user-images.githubusercontent.com/23361087/228574414-a9056887-66e7-41cf-959b-2bbb2d883a06.png)
+
+##Dark Mode
+![image](https://user-images.githubusercontent.com/23361087/228574554-cbbe352f-8d57-4673-9a9b-c9a91af8c8a9.png)
+
 
 
 # ToDo
