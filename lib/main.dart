@@ -81,12 +81,18 @@ class _NavBarState extends State<NavBar> {
           darkModeToggle = 1;
           globals.seedColor = globals.darkModeSeed;
           globals.backgroundColor = globals.darkModeBackground;
+          globals.navColor= globals.darkNavColor;
+          globals.navIconColor = globals.darkNavIconColor;
+          globals.selectedNavButtonColor = globals.darkSelectedNavButtonColor;
           }else{
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
             darkModeToggle = 0;
             globals.seedColor = globals.lightModeSeed;
             globals.backgroundColor=globals.lightModeBackground;
+            globals.navColor = globals.lightNavColor;
+            globals.navIconColor = globals.lightNavIconColor;
+            globals.selectedNavButtonColor = globals.lightSelectedNavButtonColor;
           } 
         
       break;
@@ -96,7 +102,14 @@ class _NavBarState extends State<NavBar> {
       body: Row(
         children: [
           NavigationRail(
-            backgroundColor: Color.fromARGB(255, 255, 255, 255),
+            selectedLabelTextStyle: TextStyle(color: globals.navIconColor),
+            selectedIconTheme: IconThemeData(color: globals.navIconColor),
+            indicatorColor: globals.selectedNavButtonColor,
+
+            unselectedLabelTextStyle: TextStyle(color: globals.navIconColor),
+            unselectedIconTheme: IconThemeData(color: globals.navIconColor),
+            
+            backgroundColor: globals.navColor,
             extended: true,
             minExtendedWidth: 170,
             destinations:[
