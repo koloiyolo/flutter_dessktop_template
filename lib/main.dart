@@ -81,6 +81,7 @@ class _NavBarState extends State<NavBar> {
           globals.selectedNavButtonColor = globals.darkSelectedNavButtonColor;
           globals.textColor = globals.darkTextColor;
           globals.cardColor = globals.darkNavColor;
+          globals.buttonColor = globals.darkButtonColor;
           }else{
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
@@ -94,6 +95,7 @@ class _NavBarState extends State<NavBar> {
             globals.selectedNavButtonColor = globals.lightSelectedNavButtonColor;
             globals.textColor = globals.lightTextColor;
             globals.cardColor = globals.lightCardColor;
+            globals.buttonColor = globals.lightButtonColor;
           } 
         
       break;
@@ -120,7 +122,7 @@ class _NavBarState extends State<NavBar> {
                 label: Text('Main Page')),
 
               const NavigationRailDestination(
-                icon: Icon(Icons.add), 
+                icon: Icon(Icons.add_box), 
                 label: Text('Add')),
               
               const NavigationRailDestination(

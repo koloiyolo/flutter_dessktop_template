@@ -19,7 +19,8 @@ class _SettingsPageState extends State<SettingsPage> {
         children: [
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -44,7 +45,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -69,7 +71,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -94,7 +97,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -119,7 +123,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -144,7 +149,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
+              color: globals.cardColor,
+              surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -156,31 +162,33 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   Row(
                     children: [
-                      ElevatedButton(
+                      ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor:
                                 globals.buttonColor), //<====== Working on that rn
                         onPressed: () {
                           setState(() {
-                            globals.textSize = 17.0;
+                            globals.textSize --;
                           });
                           ;
                         },
-                        child: Text('Small',
+                        icon: Icon(Icons.remove, color: globals.buttonTextColor), 
+                        label : Text('Minus',
                             style: TextStyle(
                                 fontSize: globals.textSize,
                                 color: globals.buttonTextColor)),
                       ),
                       const SizedBox(width: 5),
-                      ElevatedButton(
+                      ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
                             backgroundColor: globals.buttonColor),
                         onPressed: () {
                           setState(() {
-                            globals.textSize = 30;
+                            globals.textSize ++;
                           });
                         },
-                        child: Text('Big',
+                        icon: Icon(Icons.add, color: globals.buttonTextColor),
+                        label: Text('Plus',
                             style: TextStyle(
                                 fontSize: globals.textSize,
                                 color: globals.buttonTextColor)),
