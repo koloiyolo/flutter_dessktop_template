@@ -18,106 +18,78 @@ class _AddPageState extends State<AddPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(
-              height: 10,
-            ),
-            Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Textfield1: ',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                  Text(' 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Textfield2: ',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                  Text(' 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Textfield3: ',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                  Text(' 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Textfield4: ',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                  Text(' 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Textfield5: ',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                  Text(' 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize * 1.5,
-                          color: globals.textColor)),
-                ],
-              ),
-            ),
+            const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
+                     const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
+                     const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
+                     const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
+                     const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
+                     const SizedBox(height: 5),
+            Text("Field 1",
+                style: TextStyle(
+                    color: globals.textColor, fontSize: globals.textSize)),
+            TextField(
+              cursorColor: globals.textColor,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                    fillColor: globals.textColor,
+                    ),
+                style: TextStyle(
+                    fontSize: globals.textSize, color: globals.textColor)),
             const SizedBox(height: 20),
             ElevatedButton.icon(
               onPressed: () {},

@@ -29,8 +29,8 @@ var darkNavColor = const Color.fromARGB(255, 67, 67, 67);
 var darkNavIconColor = const Color.fromARGB(255, 255, 255, 255);
 var darkSelectedNavButtonColor = const Color.fromARGB(255, 100, 100, 100);
 var darkTextColor = const Color.fromARGB(255, 255, 255, 255);
-var darkCardColor = const Color.fromARGB(255, 140, 140, 140);
-var darkButtonColor = const Color.fromARGB(255, 50, 50, 50);
+var darkCardColor = const Color.fromARGB(255, 200, 200, 200);
+var darkButtonColor = const Color.fromARGB(255, 60, 60, 60);
 
 //Mode vars
 var backgroundColor = lightModeBackground;
