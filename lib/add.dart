@@ -25,6 +25,7 @@ class _AddPageState extends State<AddPage> {
               children: [
                 Expanded(
                   child: Text("Field 1",
+                  textAlign: TextAlign.center,
                       style: TextStyle(
                           color: globals.textColor,
                           fontSize: globals.textSize)),
@@ -48,6 +49,7 @@ class _AddPageState extends State<AddPage> {
               children: [
                 Expanded(
                   child: Text("Field 1",
+                  textAlign: TextAlign.center,
                       style: TextStyle(
                           color: globals.textColor,
                           fontSize: globals.textSize)),
@@ -71,6 +73,7 @@ class _AddPageState extends State<AddPage> {
               children: [
                 Expanded(
                   child: Text("Field 1",
+                  textAlign: TextAlign.center,
                       style: TextStyle(
                           color: globals.textColor,
                           fontSize: globals.textSize)),
@@ -94,6 +97,7 @@ class _AddPageState extends State<AddPage> {
               children: [
                 Expanded(
                   child: Text("Field 1",
+                  textAlign: TextAlign.center,
                       style: TextStyle(
                           color: globals.textColor,
                           fontSize: globals.textSize)),
@@ -117,6 +121,7 @@ class _AddPageState extends State<AddPage> {
               children: [
                 Expanded(
                   child: Text("Field 1",
+                  textAlign: TextAlign.center,
                       style: TextStyle(
                           color: globals.textColor,
                           fontSize: globals.textSize)),
