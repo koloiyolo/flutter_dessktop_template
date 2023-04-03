@@ -24,8 +24,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         
         theme: ThemeData(
-          useMaterial3: true,
-          colorSchemeSeed: Colors.grey,),
+          primaryColor: Color.fromARGB(255, 125, 125, 125)),
         home: const NavBar()
       );
     

@@ -17,7 +17,7 @@ class _SettingsPageState extends State<SettingsPage> {
       backgroundColor: globals.backgroundColor,
       body: Column(
         children: [
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
@@ -43,7 +43,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
@@ -69,7 +69,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
@@ -95,7 +95,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
@@ -121,7 +121,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
@@ -147,7 +147,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 10),
           Card(
               color: globals.cardColor,
               surfaceTintColor: globals.cardColor,
