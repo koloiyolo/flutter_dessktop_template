@@ -11,6 +11,28 @@ class AddPage extends StatefulWidget {
 }
 
 class _AddPageState extends State<AddPage> {
+  final f1controller = TextEditingController();
+  final f2controller = TextEditingController();
+  final f3controller = TextEditingController();
+  final f4controller = TextEditingController();
+  final f5controller = TextEditingController();
+  var field1;
+  var field2;
+  var field3;
+  var field4;
+  var field5;
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    f1controller.dispose();
+    f2controller.dispose();
+    f3controller.dispose();
+    f4controller.dispose();
+    f5controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,130 +40,151 @@ class _AddPageState extends State<AddPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const SizedBox(height: 3),
-            Card(
-              color: globals.cardColor,
-                child: Row(
-              children: [
-                Expanded(
-                  child: Text("Field 1",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: globals.textColor,
-                          fontSize: globals.textSize)),
-                ),
-                Expanded(
-                  child: TextField(
-                      cursorColor: globals.textColor,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        fillColor: globals.textColor,
-                      ),
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
-                )
-              ],
-            )),
-           Card(
-              color: globals.cardColor,
-                child: Row(
-              children: [
-                Expanded(
-                  child: Text("Field 1",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: globals.textColor,
-                          fontSize: globals.textSize)),
-                ),
-                Expanded(
-                  child: TextField(
-                      cursorColor: globals.textColor,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        fillColor: globals.textColor,
-                      ),
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
-                )
-              ],
-            )),
-            Card(
-              color: globals.cardColor,
-                child: Row(
-              children: [
-                Expanded(
-                  child: Text("Field 1",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: globals.textColor,
-                          fontSize: globals.textSize)),
-                ),
-                Expanded(
-                  child: TextField(
-                      cursorColor: globals.textColor,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        fillColor: globals.textColor,
-                      ),
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
-                )
-              ],
-            )),
-            Card(
-              color: globals.cardColor,
-                child: Row(
-              children: [
-                Expanded(
-                  child: Text("Field 1",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: globals.textColor,
-                          fontSize: globals.textSize)),
-                ),
-                Expanded(
-                  child: TextField(
-                      cursorColor: globals.textColor,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        fillColor: globals.textColor,
-                      ),
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
-                )
-              ],
-            )),
-            Card(
-              color: globals.cardColor,
-                child: Row(
-              children: [
-                Expanded(
-                  child: Text("Field 1",
-                  textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: globals.textColor,
-                          fontSize: globals.textSize)),
-                ),
-                Expanded(
-                  child: TextField(
-                      cursorColor: globals.textColor,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        fillColor: globals.textColor,
-                      ),
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
-                )
-              ],
-            )),
             const SizedBox(height: 10),
+            Card(
+                color: globals.cardColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("Field 1",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: globals.textColor,
+                              fontSize: globals.textSize)),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                          controller: f1controller,
+                          validator: (value) {},
+                          cursorColor: globals.textColor,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            fillColor: globals.textColor,
+                          ),
+                          style: TextStyle(
+                              fontSize: globals.textSize,
+                              color: globals.textColor)),
+                    )
+                  ],
+                )),
+            const SizedBox(height: 10),
+            Card(
+                color: globals.cardColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("Field 1",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: globals.textColor,
+                              fontSize: globals.textSize)),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                          controller: f2controller,
+                          cursorColor: globals.textColor,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            fillColor: globals.textColor,
+                          ),
+                          style: TextStyle(
+                              fontSize: globals.textSize,
+                              color: globals.textColor)),
+                    )
+                  ],
+                )),
+            const SizedBox(height: 10),
+            Card(
+                color: globals.cardColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("Field 1",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: globals.textColor,
+                              fontSize: globals.textSize)),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                          controller: f3controller,
+                          cursorColor: globals.textColor,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            fillColor: globals.textColor,
+                          ),
+                          style: TextStyle(
+                              fontSize: globals.textSize,
+                              color: globals.textColor)),
+                    )
+                  ],
+                )),
+            const SizedBox(height: 10),
+            Card(
+                color: globals.cardColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("Field 1",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: globals.textColor,
+                              fontSize: globals.textSize)),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                          controller: f4controller,
+                          cursorColor: globals.textColor,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            fillColor: globals.textColor,
+                          ),
+                          style: TextStyle(
+                              fontSize: globals.textSize,
+                              color: globals.textColor)),
+                    )
+                  ],
+                )),
+            const SizedBox(height: 10),
+            Card(
+                color: globals.cardColor,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("Field 1",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: globals.textColor,
+                              fontSize: globals.textSize)),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                          controller: f5controller,
+                          cursorColor: globals.textColor,
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            fillColor: globals.textColor,
+                          ),
+                          style: TextStyle(
+                              fontSize: globals.textSize,
+                              color: globals.textColor)),
+                    )
+                  ],
+                )),
+            const SizedBox(height: 15),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                field1 = f1controller.text;
+                field2 = f2controller.text;
+                field3 = f3controller.text;
+                field4 = f4controller.text;
+                field5 = f5controller.text;
+                showDialog(context: context, builder: (context){
+                  return AlertDialog(
+                    content: Text("Created: "+ field1 + "/" + field2 + "/" + field3 + "/" + field4)
+                  );
+                });
+              },
               icon: Icon(Icons.add_box, color: globals.buttonTextColor),
               style: ElevatedButton.styleFrom(
                   backgroundColor: globals.buttonColor,
@@ -153,6 +196,8 @@ class _AddPageState extends State<AddPage> {
                     color: globals.buttonTextColor),
               ),
             ),
+            const SizedBox(height: 10),
+            
             const SizedBox(height: 80)
           ],
         ));

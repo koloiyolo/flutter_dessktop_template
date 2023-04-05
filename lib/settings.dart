@@ -18,10 +18,9 @@ class _SettingsPageState extends State<SettingsPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -29,7 +28,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Option 1',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -46,8 +46,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -55,7 +55,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Option 2',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -72,8 +73,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -81,7 +82,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Option 3',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -98,8 +100,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -107,7 +109,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Option 4',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -124,8 +127,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -133,7 +136,8 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Option 5',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -150,8 +154,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-              color: globals.cardColor,
-              surfaceTintColor: globals.cardColor,
+            color: globals.cardColor,
+            surfaceTintColor: globals.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -159,22 +163,24 @@ class _SettingsPageState extends State<SettingsPage> {
                 children: [
                   Text('Text Size',
                       style: TextStyle(
-                          fontSize: globals.textSize, color: globals.textColor)),
+                          fontSize: globals.textSize,
+                          color: globals.textColor)),
                   const SizedBox(width: 30),
                   Row(
                     children: [
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor:
-                                globals.buttonColor), //<====== Working on that rn
+                            backgroundColor: globals
+                                .buttonColor), //<====== Working on that rn
                         onPressed: () {
                           setState(() {
-                            globals.textSize --;
+                            globals.textSize--;
                           });
                           ;
                         },
-                        icon: Icon(Icons.remove, color: globals.buttonTextColor), 
-                        label : Text('Minus',
+                        icon:
+                            Icon(Icons.remove, color: globals.buttonTextColor),
+                        label: Text('Minus',
                             style: TextStyle(
                                 fontSize: globals.textSize,
                                 color: globals.buttonTextColor)),
@@ -185,7 +191,7 @@ class _SettingsPageState extends State<SettingsPage> {
                             backgroundColor: globals.buttonColor),
                         onPressed: () {
                           setState(() {
-                            globals.textSize ++;
+                            globals.textSize++;
                           });
                         },
                         icon: Icon(Icons.add, color: globals.buttonTextColor),
