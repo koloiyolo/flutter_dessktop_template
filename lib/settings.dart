@@ -26,19 +26,13 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Option 1',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                  buildText("Option 1"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: globals.buttonColor),
                     onPressed: () {},
-                    child: Text(' Toggle',
-                        style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.buttonTextColor)),
+                    child: buildButtonText("Toggle"),
                   ),
                 ],
               ),
@@ -53,19 +47,13 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Option 2',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                  buildText("Option 2"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: globals.buttonColor),
                     onPressed: () {},
-                    child: Text(' Toggle',
-                        style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.buttonTextColor)),
+                    child: buildButtonText("Toggle")
                   ),
                 ],
               ),
@@ -80,19 +68,13 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Option 3',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                  buildText("Option 3"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: globals.buttonColor),
                     onPressed: () {},
-                    child: Text(' Toggle',
-                        style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.buttonTextColor)),
+                    child: buildButtonText("Toggle")
                   ),
                 ],
               ),
@@ -107,19 +89,13 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Option 4',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                 buildText("Option 4"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: globals.buttonColor),
                     onPressed: () {},
-                    child: Text(' Toggle',
-                        style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.buttonTextColor)),
+                    child: buildButtonText("Toggle")
                   ),
                 ],
               ),
@@ -134,19 +110,13 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Option 5',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                  buildText("Option 5"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: globals.buttonColor),
                     onPressed: () {},
-                    child: Text(' Toggle',
-                        style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.buttonTextColor)),
+                    child: buildButtonText("Toggle")
                   ),
                 ],
               ),
@@ -161,10 +131,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Text Size',
-                      style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.textColor)),
+                  buildText("Font Size"),
                   const SizedBox(width: 30),
                   Row(
                     children: [
@@ -180,10 +147,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         },
                         icon:
                             Icon(Icons.remove, color: globals.buttonTextColor),
-                        label: Text('Minus',
-                            style: TextStyle(
-                                fontSize: globals.textSize,
-                                color: globals.buttonTextColor)),
+                        label: buildButtonText("Minus"),
                       ),
                       const SizedBox(width: 5),
                       ElevatedButton.icon(
@@ -195,10 +159,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           });
                         },
                         icon: Icon(Icons.add, color: globals.buttonTextColor),
-                        label: Text('Plus',
-                            style: TextStyle(
-                                fontSize: globals.textSize,
-                                color: globals.buttonTextColor)),
+                        label: buildButtonText("Plus"),
                       ),
                     ],
                   ),
@@ -209,5 +170,19 @@ class _SettingsPageState extends State<SettingsPage> {
         ],
       ),
     );
+  }
+
+  Text buildButtonText(String text) {
+    return Text(text,
+                      style: TextStyle(
+                          fontSize: globals.textSize,
+                          color: globals.buttonTextColor));
+  }
+
+  Text buildText(String text) {
+    return Text(text,
+                    style: TextStyle(
+                        fontSize: globals.textSize,
+                        color: globals.textColor));
   }
 }

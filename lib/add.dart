@@ -40,138 +40,21 @@ class _AddPageState extends State<AddPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            
+            //textFields
             const SizedBox(height: 10),
-            Card(
-                color: globals.cardColor,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text("Field 1",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: globals.textColor,
-                              fontSize: globals.textSize)),
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                          controller: f1controller,
-                          validator: (value) {},
-                          cursorColor: globals.textColor,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            fillColor: globals.textColor,
-                          ),
-                          style: TextStyle(
-                              fontSize: globals.textSize,
-                              color: globals.textColor)),
-                    )
-                  ],
-                )),
+            buildTextField("Field1", f1controller),
             const SizedBox(height: 10),
-            Card(
-                color: globals.cardColor,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text("Field 1",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: globals.textColor,
-                              fontSize: globals.textSize)),
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                          controller: f2controller,
-                          cursorColor: globals.textColor,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            fillColor: globals.textColor,
-                          ),
-                          style: TextStyle(
-                              fontSize: globals.textSize,
-                              color: globals.textColor)),
-                    )
-                  ],
-                )),
+            buildTextField("Field2", f2controller),
             const SizedBox(height: 10),
-            Card(
-                color: globals.cardColor,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text("Field 1",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: globals.textColor,
-                              fontSize: globals.textSize)),
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                          controller: f3controller,
-                          cursorColor: globals.textColor,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            fillColor: globals.textColor,
-                          ),
-                          style: TextStyle(
-                              fontSize: globals.textSize,
-                              color: globals.textColor)),
-                    )
-                  ],
-                )),
+            buildTextField("Field3", f3controller),
             const SizedBox(height: 10),
-            Card(
-                color: globals.cardColor,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text("Field 1",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: globals.textColor,
-                              fontSize: globals.textSize)),
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                          controller: f4controller,
-                          cursorColor: globals.textColor,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            fillColor: globals.textColor,
-                          ),
-                          style: TextStyle(
-                              fontSize: globals.textSize,
-                              color: globals.textColor)),
-                    )
-                  ],
-                )),
+            buildTextField("Field4", f4controller),
             const SizedBox(height: 10),
-            Card(
-                color: globals.cardColor,
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Text("Field 1",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: globals.textColor,
-                              fontSize: globals.textSize)),
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                          controller: f5controller,
-                          cursorColor: globals.textColor,
-                          decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            fillColor: globals.textColor,
-                          ),
-                          style: TextStyle(
-                              fontSize: globals.textSize,
-                              color: globals.textColor)),
-                    )
-                  ],
-                )),
+            buildTextField("Field5", f5controller),
             const SizedBox(height: 15),
+
+            //button
             ElevatedButton.icon(
               onPressed: () {
                 field1 = f1controller.text;
@@ -201,5 +84,34 @@ class _AddPageState extends State<AddPage> {
             const SizedBox(height: 80)
           ],
         ));
+  }
+
+  Card buildTextField(String text, var controller) {
+    return Card(
+              color: globals.cardColor,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text("Field 1",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: globals.textColor,
+                            fontSize: globals.textSize)),
+                  ),
+                  Expanded(
+                    child: TextFormField(
+                        controller: controller,
+                        validator: (value) {},
+                        cursorColor: globals.textColor,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          fillColor: globals.textColor,
+                        ),
+                        style: TextStyle(
+                            fontSize: globals.textSize,
+                            color: globals.textColor)),
+                  )
+                ],
+              ));
   }
 }
