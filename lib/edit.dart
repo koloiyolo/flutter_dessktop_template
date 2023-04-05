@@ -14,11 +14,18 @@ class _EditPageState extends State<EditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: globals.backgroundColor,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Edit Page', style: TextStyle(fontSize: globals.textSize)),
+          Center(child: buildText("editPage")),
         ],
       ),
     );
   }
+}
+
+Text buildText(String text) {
+  return Text(text,
+      style: TextStyle(fontSize: globals.textSize, color: globals.textColor));
 }

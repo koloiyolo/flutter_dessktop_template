@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+// import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'globals.dart' as globals;
 
 class AddPage extends StatefulWidget {
@@ -16,11 +17,12 @@ class _AddPageState extends State<AddPage> {
   final f3controller = TextEditingController();
   final f4controller = TextEditingController();
   final f5controller = TextEditingController();
-  var field1;
-  var field2;
-  var field3;
-  var field4;
-  var field5;
+
+  var field1="";
+  var field2="";
+  var field3="";
+  var field4="";
+  var field5="";
 
   @override
   void dispose() {
@@ -40,7 +42,7 @@ class _AddPageState extends State<AddPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            
+
             //textFields
             const SizedBox(height: 10),
             buildTextField("Field1", f1controller),
@@ -64,7 +66,7 @@ class _AddPageState extends State<AddPage> {
                 field5 = f5controller.text;
                 showDialog(context: context, builder: (context){
                   return AlertDialog(
-                    content: Text("Created: "+ field1 + "/" + field2 + "/" + field3 + "/" + field4)
+                    content: Text('Field values: $field1/$field2/$field3/$field4/$field5')
                   );
                 });
               },
@@ -92,7 +94,7 @@ class _AddPageState extends State<AddPage> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Text("Field 1",
+                    child: Text(text,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: globals.textColor,
@@ -104,7 +106,7 @@ class _AddPageState extends State<AddPage> {
                         validator: (value) {},
                         cursorColor: globals.textColor,
                         decoration: InputDecoration(
-                          border: OutlineInputBorder(),
+                          border: const OutlineInputBorder(),
                           fillColor: globals.textColor,
                         ),
                         style: TextStyle(

@@ -3,7 +3,7 @@ import 'package:flutter_dessktop_template/add.dart';
 import 'package:flutter_dessktop_template/edit.dart';
 import 'package:flutter_dessktop_template/home.dart';
 import 'package:flutter_dessktop_template/settings.dart';
-import 'package:provider/provider.dart';
+
 import 'globals.dart' as globals;
 
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         
         theme: ThemeData(
-          primaryColor: Color.fromARGB(255, 125, 125, 125)),
+          primaryColor: const Color.fromARGB(255, 125, 125, 125)),
         home: const NavBar()
       );
     
@@ -40,7 +40,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  var lastIndex = 0;
+  int lastIndex = 0;
   int index = 0;
   int darkModeToggle = 0;
   Icon darkLightModeIcon = const Icon(Icons.dark_mode);
@@ -72,29 +72,13 @@ class _NavBarState extends State<NavBar> {
           darkLightModeText = const Text('Light Mode');
           darkModeToggle = 1;
 
-          // Setting dark theme
-          //globals.seedColor = globals.darkModeSeed;
-          globals.backgroundColor = globals.darkModeBackground;
-          globals.navColor= globals.darkNavColor;
-          globals.navIconColor = globals.darkNavIconColor;
-          globals.selectedNavButtonColor = globals.darkSelectedNavButtonColor;
-          globals.textColor = globals.darkTextColor;
-          globals.cardColor = globals.darkNavColor;
-          globals.buttonColor = globals.darkButtonColor;
+          applyDarkTheme();
           }else{
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
             darkModeToggle = 0;
 
-            // Setting light theme
-            //globals.seedColor = globals.lightModeSeed;
-            globals.backgroundColor=globals.lightModeBackground;
-            globals.navColor = globals.lightNavColor;
-            globals.navIconColor = globals.lightNavIconColor;
-            globals.selectedNavButtonColor = globals.lightSelectedNavButtonColor;
-            globals.textColor = globals.lightTextColor;
-            globals.cardColor = globals.lightCardColor;
-            globals.buttonColor = globals.lightButtonColor;
+            applyLightTheme();
           } 
         
       break;
@@ -151,5 +135,27 @@ class _NavBarState extends State<NavBar> {
       )
     );
   }
+}
+
+
+//theme switching
+void applyDarkTheme () {
+          globals.backgroundColor = globals.darkModeBackground;
+          globals.navColor= globals.darkNavColor;
+          globals.navIconColor = globals.darkNavIconColor;
+          globals.selectedNavButtonColor = globals.darkSelectedNavButtonColor;
+          globals.textColor = globals.darkTextColor;
+          globals.cardColor = globals.darkNavColor;
+          globals.buttonColor = globals.darkButtonColor;
+}
+
+void applyLightTheme () {
+            globals.backgroundColor=globals.lightModeBackground;
+            globals.navColor = globals.lightNavColor;
+            globals.navIconColor = globals.lightNavIconColor;
+            globals.selectedNavButtonColor = globals.lightSelectedNavButtonColor;
+            globals.textColor = globals.lightTextColor;
+            globals.cardColor = globals.lightCardColor;
+            globals.buttonColor = globals.lightButtonColor;
 }
 

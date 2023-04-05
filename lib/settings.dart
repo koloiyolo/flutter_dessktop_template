@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
+
 import 'globals.dart' as globals;
 
 class SettingsPage extends StatefulWidget {
@@ -171,7 +172,7 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
     );
   }
-
+}
   Text buildButtonText(String text) {
     return Text(text,
                       style: TextStyle(
@@ -185,4 +186,4 @@ class _SettingsPageState extends State<SettingsPage> {
                         fontSize: globals.textSize,
                         color: globals.textColor));
   }
-}
+
