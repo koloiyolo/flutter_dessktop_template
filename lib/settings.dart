@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
-import 'globals.dart' as globals;
+import 'theme.dart' as theme;
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -15,13 +15,13 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: globals.backgroundColor,
+      backgroundColor: theme.backgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -31,7 +31,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: globals.buttonColor),
+                        backgroundColor: theme.buttonColor),
                     onPressed: () {},
                     child: buildButtonText("Toggle"),
                   ),
@@ -41,8 +41,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: globals.buttonColor),
+                        backgroundColor: theme.buttonColor),
                     onPressed: () {},
                     child: buildButtonText("Toggle")
                   ),
@@ -62,8 +62,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -73,7 +73,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: globals.buttonColor),
+                        backgroundColor: theme.buttonColor),
                     onPressed: () {},
                     child: buildButtonText("Toggle")
                   ),
@@ -83,8 +83,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -94,7 +94,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: globals.buttonColor),
+                        backgroundColor: theme.buttonColor),
                     onPressed: () {},
                     child: buildButtonText("Toggle")
                   ),
@@ -104,8 +104,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -115,7 +115,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                        backgroundColor: globals.buttonColor),
+                        backgroundColor: theme.buttonColor),
                     onPressed: () {},
                     child: buildButtonText("Toggle")
                   ),
@@ -125,8 +125,8 @@ class _SettingsPageState extends State<SettingsPage> {
           ),
           const SizedBox(height: 10),
           Card(
-            color: globals.cardColor,
-            surfaceTintColor: globals.cardColor,
+            color: theme.cardColor,
+            surfaceTintColor: theme.cardColor,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
               child: Row(
@@ -138,28 +138,27 @@ class _SettingsPageState extends State<SettingsPage> {
                     children: [
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: globals
-                                .buttonColor), //<====== Working on that rn
+                            backgroundColor: theme.buttonColor), //<====== Working on that rn
                         onPressed: () {
                           setState(() {
-                            globals.textSize--;
+                            theme.textSize--;
                           });
                           ;
                         },
                         icon:
-                            Icon(Icons.remove, color: globals.buttonTextColor),
+                            Icon(Icons.remove, color: theme.buttonTextColor),
                         label: buildButtonText("Minus"),
                       ),
                       const SizedBox(width: 5),
                       ElevatedButton.icon(
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: globals.buttonColor),
+                            backgroundColor: theme.buttonColor),
                         onPressed: () {
                           setState(() {
-                            globals.textSize++;
+                            theme.textSize++;
                           });
                         },
-                        icon: Icon(Icons.add, color: globals.buttonTextColor),
+                        icon: Icon(Icons.add, color: theme.buttonTextColor),
                         label: buildButtonText("Plus"),
                       ),
                     ],
@@ -176,14 +175,14 @@ class _SettingsPageState extends State<SettingsPage> {
   Text buildButtonText(String text) {
     return Text(text,
                       style: TextStyle(
-                          fontSize: globals.textSize,
-                          color: globals.buttonTextColor));
+                          fontSize: theme.textSize,
+                          color: theme.buttonTextColor));
   }
 
   Text buildText(String text) {
     return Text(text,
                     style: TextStyle(
-                        fontSize: globals.textSize,
-                        color: globals.textColor));
+                        fontSize: theme.textSize,
+                        color: theme.textColor));
   }
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 // import 'package:flutter/src/widgets/placeholder.dart';
 
-import 'globals.dart' as globals;
+import 'theme.dart' as theme;
 
 class AddPage extends StatefulWidget {
   const AddPage({super.key});
@@ -38,7 +38,7 @@ class _AddPageState extends State<AddPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: globals.backgroundColor,
+        backgroundColor: theme.backgroundColor,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -70,15 +70,15 @@ class _AddPageState extends State<AddPage> {
                   );
                 });
               },
-              icon: Icon(Icons.add_box, color: globals.buttonTextColor),
+              icon: Icon(Icons.add_box, color: theme.buttonTextColor),
               style: ElevatedButton.styleFrom(
-                  backgroundColor: globals.buttonColor,
-                  surfaceTintColor: globals.cardColor),
+                  backgroundColor: theme.buttonColor,
+                  surfaceTintColor: theme.cardColor),
               label: Text(
                 'ADD',
                 style: TextStyle(
-                    fontSize: globals.textSize * 2,
-                    color: globals.buttonTextColor),
+                    fontSize: theme.textSize * 2,
+                    color: theme.buttonTextColor),
               ),
             ),
             const SizedBox(height: 10),
@@ -90,28 +90,28 @@ class _AddPageState extends State<AddPage> {
 
   Card buildTextField(String text, var controller) {
     return Card(
-              color: globals.cardColor,
+              color: theme.cardColor,
               child: Row(
                 children: [
                   Expanded(
                     child: Text(text,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: globals.textColor,
-                            fontSize: globals.textSize)),
+                            color: theme.textColor,
+                            fontSize: theme.textSize)),
                   ),
                   Expanded(
                     child: TextFormField(
                         controller: controller,
                         validator: (value) {},
-                        cursorColor: globals.textColor,
+                        cursorColor: theme.textColor,
                         decoration: InputDecoration(
                           border: const OutlineInputBorder(),
-                          fillColor: globals.textColor,
+                          fillColor: theme.textColor,
                         ),
                         style: TextStyle(
-                            fontSize: globals.textSize,
-                            color: globals.textColor)),
+                            fontSize: theme.textSize,
+                            color: theme.textColor)),
                   )
                 ],
               ));

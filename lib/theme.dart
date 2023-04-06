@@ -42,3 +42,23 @@ var textColor =lightTextColor;
 var buttonColor = lightButtonColor;
 var buttonTextColor = darkTextColor;
 var cardColor = lightCardColor;
+
+void applyDarkTheme () {
+          backgroundColor = darkModeBackground;
+          navColor= darkNavColor;
+          navIconColor = darkNavIconColor;
+          selectedNavButtonColor = darkSelectedNavButtonColor;
+          textColor = darkTextColor;
+          cardColor = darkNavColor;
+          buttonColor = darkButtonColor;
+}
+
+void applyLightTheme () {
+            backgroundColor=lightModeBackground;
+            navColor = lightNavColor;
+            navIconColor = lightNavIconColor;
+            selectedNavButtonColor = lightSelectedNavButtonColor;
+            textColor = lightTextColor;
+            cardColor = lightCardColor;
+            buttonColor = lightButtonColor;
+}

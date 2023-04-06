@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'globals.dart' as globals;
+import 'theme.dart' as theme;
 
 class EditPage extends StatefulWidget {
   const EditPage({super.key});
@@ -14,7 +14,7 @@ class _EditPageState extends State<EditPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: globals.backgroundColor,
+      backgroundColor: theme.backgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -27,5 +27,5 @@ class _EditPageState extends State<EditPage> {
 
 Text buildText(String text) {
   return Text(text,
-      style: TextStyle(fontSize: globals.textSize, color: globals.textColor));
+      style: TextStyle(fontSize: theme.textSize, color: theme.textColor));
 }

@@ -4,7 +4,7 @@ import 'package:flutter_dessktop_template/edit.dart';
 import 'package:flutter_dessktop_template/home.dart';
 import 'package:flutter_dessktop_template/settings.dart';
 
-import 'globals.dart' as globals;
+import 'theme.dart' as theme;
 
 
 void main() {
@@ -51,19 +51,19 @@ class _NavBarState extends State<NavBar> {
     
     switch(index){
       case 0: 
-        globals.page = const HomePage();
+        theme.page = const HomePage();
         lastIndex = 0;
       break;
       case 1: 
-        globals.page = const AddPage();
+        theme.page = const AddPage();
         lastIndex = 1;
       break;
       case 2:
-        globals.page = const EditPage();
+        theme.page = const EditPage();
         lastIndex = 2;
       break;
       case 3: 
-        globals.page = const SettingsPage();
+        theme.page = const SettingsPage();
         lastIndex = 3;
       break;
       case 4:
@@ -72,13 +72,13 @@ class _NavBarState extends State<NavBar> {
           darkLightModeText = const Text('Light Mode');
           darkModeToggle = 1;
 
-          applyDarkTheme();
+          theme.applyDarkTheme();
           }else{
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
             darkModeToggle = 0;
 
-            applyLightTheme();
+            theme.applyLightTheme();
           } 
         
       break;
@@ -89,14 +89,14 @@ class _NavBarState extends State<NavBar> {
         children: [
           NavigationRail(
             selectedIndex: lastIndex,
-            selectedLabelTextStyle: TextStyle(color: globals.navIconColor),
-            selectedIconTheme: IconThemeData(color: globals.navIconColor),
-            indicatorColor: globals.selectedNavButtonColor,
+            selectedLabelTextStyle: TextStyle(color: theme.navIconColor),
+            selectedIconTheme: IconThemeData(color: theme.navIconColor),
+            indicatorColor: theme.selectedNavButtonColor,
 
-            unselectedLabelTextStyle: TextStyle(color: globals.navIconColor),
-            unselectedIconTheme: IconThemeData(color: globals.navIconColor),
+            unselectedLabelTextStyle: TextStyle(color: theme.navIconColor),
+            unselectedIconTheme: IconThemeData(color: theme.navIconColor),
             
-            backgroundColor: globals.navColor,
+            backgroundColor: theme.navColor,
             extended: true,
             minExtendedWidth: 170,
             destinations:[
@@ -128,7 +128,7 @@ class _NavBarState extends State<NavBar> {
           Expanded(
           child: Container(
             color: Theme.of(context).colorScheme.tertiary,
-            child: globals.page,
+            child: theme.page,
           )
         )
         ],
@@ -138,24 +138,4 @@ class _NavBarState extends State<NavBar> {
 }
 
 
-//theme switching
-void applyDarkTheme () {
-          globals.backgroundColor = globals.darkModeBackground;
-          globals.navColor= globals.darkNavColor;
-          globals.navIconColor = globals.darkNavIconColor;
-          globals.selectedNavButtonColor = globals.darkSelectedNavButtonColor;
-          globals.textColor = globals.darkTextColor;
-          globals.cardColor = globals.darkNavColor;
-          globals.buttonColor = globals.darkButtonColor;
-}
-
-void applyLightTheme () {
-            globals.backgroundColor=globals.lightModeBackground;
-            globals.navColor = globals.lightNavColor;
-            globals.navIconColor = globals.lightNavIconColor;
-            globals.selectedNavButtonColor = globals.lightSelectedNavButtonColor;
-            globals.textColor = globals.lightTextColor;
-            globals.cardColor = globals.lightCardColor;
-            globals.buttonColor = globals.lightButtonColor;
-}
 

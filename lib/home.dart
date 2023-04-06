@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 // import 'package:flutter/src/widgets/placeholder.dart';
-import 'globals.dart' as globals;
+import 'theme.dart' as theme;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: globals.backgroundColor,
+      backgroundColor: theme.backgroundColor,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -28,6 +28,6 @@ class _HomePageState extends State<HomePage> {
 Text buildText(String text) {
     return Text(text,
                     style: TextStyle(
-                        fontSize: globals.textSize,
-                        color: globals.textColor));
+                        fontSize: theme.textSize,
+                        color: theme.textColor));
 }
