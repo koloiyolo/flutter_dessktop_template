@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dessktop_template/backend.dart';
 //import 'package:flutter/src/widgets/framework.dart';
 //import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -27,12 +28,12 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Option 1"),
+                  buildText("Add test obj"),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: theme.buttonColor),
-                    onPressed: () {},
+                    onPressed: () { myList.add(Something('XD', 'DX', 'XD', 'DX', 'XD'));},
                     child: buildButtonText("Toggle"),
                   ),
                 ],

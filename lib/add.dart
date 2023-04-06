@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dessktop_template/backend.dart';
 // import 'package:flutter/src/widgets/framework.dart';
 // import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -18,11 +19,6 @@ class _AddPageState extends State<AddPage> {
   final f4controller = TextEditingController();
   final f5controller = TextEditingController();
 
-  var field1="";
-  var field2="";
-  var field3="";
-  var field4="";
-  var field5="";
 
   @override
   void dispose() {
@@ -59,16 +55,32 @@ class _AddPageState extends State<AddPage> {
             //button
             ElevatedButton.icon(
               onPressed: () {
-                field1 = f1controller.text;
-                field2 = f2controller.text;
-                field3 = f3controller.text;
-                field4 = f4controller.text;
-                field5 = f5controller.text;
+                var nameField = f1controller.text;
+                var f1 = f2controller.text;
+                var f2 = f3controller.text;
+                var f3 = f4controller.text;
+                var f4 = f5controller.text;
+                if(nameField.isNotEmpty){
+                  myList.add(Something(nameField, f1, f2, f3, f4));
                 showDialog(context: context, builder: (context){
                   return AlertDialog(
-                    content: Text('Field values: $field1/$field2/$field3/$field4/$field5')
+                    content: Text('Object $nameField has been created'),
                   );
                 });
+                }else{
+                  showDialog(context: context, builder: (context){
+                    return const AlertDialog(
+                      alignment: Alignment.center,
+                      content: Text('Please fill the form')
+                    );
+                  }
+                  );
+                }
+                  f1controller.clear();
+                  f2controller.clear();
+                  f3controller.clear();
+                  f4controller.clear();
+                  f5controller.clear();
               },
               icon: Icon(Icons.add_box, color: theme.buttonTextColor),
               style: ElevatedButton.styleFrom(

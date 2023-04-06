@@ -1,11 +1,11 @@
-class Object {
+class Something {
   String name;
   String field1;
   String field2;
   String field3;
   String field4;
 
-  Object(
+  Something(
     this.name, 
     this.field1, 
     this.field2, 
@@ -25,7 +25,7 @@ class Object {
   }
 
   void setField3(String field) {
-    field4 = field;
+    field3 = field;
   }
 
   void setField4(String field) {
@@ -37,3 +37,7 @@ class Object {
   String getField3(){return field3;}
   String getField4(){return field4;}  
 }
+
+List<Something> myList = [Something('Xd', 'bjsbfj', 'fsfbhjs', 'fsbvf', 'fsb')];
+
+
