@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_dessktop_template/backend.dart';
 // import 'package:flutter/src/widgets/framework.dart';
@@ -20,13 +22,11 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.all(30),
           itemCount: myList.length,
           itemBuilder: (BuildContext context, index) {
-            return listNode(index);
+            return listNode(index, context);
           }),
     );
   }
-}
-
-Column listNode(int index) {
+  Column listNode(int index, BuildContext context) {
   return Column(
     children: [
       Card(
@@ -41,6 +41,22 @@ Column listNode(int index) {
                 child: buildText('${index + 1}. ${myList[index].getName()}'),
               )),
               const SizedBox(width: 30),
+              ElevatedButton.icon(
+                  onPressed: () {
+                    showDialog(context: context, builder: (context){
+                      return AlertDialog(
+                        content: 
+                              Text('Object info \n\nName: ${myList[index].getName()}\nField1: ${myList[index].getField1()}\nField2: ${myList[index].getField2()} \nField3: ${myList[index].getField3()}\nField4: ${myList[index].getField4()}'),
+                            
+                      );
+                    });
+                  },
+                  icon: const Icon(Icons.info),
+                  label: buildButtonText('Info'),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: theme.buttonColor,
+                      surfaceTintColor: theme.cardColor)),
+              const SizedBox(width: 10),
               ElevatedButton.icon(
                 onPressed: () {
                   // what button does
@@ -59,6 +75,8 @@ Column listNode(int index) {
     ],
   );
 }
+}
+
 
 Text buildText(String text) {
   return Text(text,

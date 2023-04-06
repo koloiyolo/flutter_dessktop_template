@@ -83,12 +83,12 @@ class _AddPageState extends State<AddPage> {
                     f4controller.clear();
                     f5controller.clear();
                 },
-                icon: Icon(Icons.add_box, color: theme.buttonTextColor),
+                icon: Icon(Icons.add_box_rounded, color: theme.buttonTextColor),
                 style: ElevatedButton.styleFrom(
                     backgroundColor: theme.buttonColor,
                     surfaceTintColor: theme.cardColor),
                 label: Text(
-                  'ADD',
+                  'Add',
                   style: TextStyle(
                       fontSize: theme.textSize * 2,
                       color: theme.buttonTextColor),

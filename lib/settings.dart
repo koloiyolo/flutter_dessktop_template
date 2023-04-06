@@ -34,7 +34,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: theme.buttonColor),
                     onPressed: () { myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));},
-                    child: buildButtonText("Toggle"),
+                    child: buildButtonText('Add'),
                   ),
                 ],
               ),
@@ -148,7 +148,6 @@ class _SettingsPageState extends State<SettingsPage> {
                         Icon(Icons.remove, color: theme.buttonTextColor),
                     label: buildButtonText("Minus"),
                   ),
-                  const SizedBox(width: 5),
                   const SizedBox(width: 10),
                   ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(
