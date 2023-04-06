@@ -35,8 +35,8 @@ class _AddPageState extends State<AddPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: theme.backgroundColor,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        body: ListView(
+          padding: const EdgeInsets.all(30),
           children: [
 
             //textFields
@@ -53,44 +53,46 @@ class _AddPageState extends State<AddPage> {
             const SizedBox(height: 15),
 
             //button
-            ElevatedButton.icon(
-              onPressed: () {
-                var nameField = f1controller.text;
-                var f1 = f2controller.text;
-                var f2 = f3controller.text;
-                var f3 = f4controller.text;
-                var f4 = f5controller.text;
-                if(nameField.isNotEmpty){
-                  myList.add(Something(nameField, f1, f2, f3, f4));
-                showDialog(context: context, builder: (context){
-                  return AlertDialog(
-                    content: Text('Object $nameField has been created'),
-                  );
-                });
-                }else{
+            Center(
+              child: ElevatedButton.icon(
+                onPressed: () {
+                  var nameField = f1controller.text;
+                  var f1 = f2controller.text;
+                  var f2 = f3controller.text;
+                  var f3 = f4controller.text;
+                  var f4 = f5controller.text;
+                  if(nameField.isNotEmpty){
+                    myList.add(Something(nameField, f1, f2, f3, f4));
                   showDialog(context: context, builder: (context){
-                    return const AlertDialog(
-                      alignment: Alignment.center,
-                      content: Text('Please fill the form')
+                    return AlertDialog(
+                      content: Text('Object $nameField has been created'),
+                    );
+                  });
+                  }else{
+                    showDialog(context: context, builder: (context){
+                      return const AlertDialog(
+                        alignment: Alignment.center,
+                        content: Text('Please fill the form')
+                      );
+                    }
                     );
                   }
-                  );
-                }
-                  f1controller.clear();
-                  f2controller.clear();
-                  f3controller.clear();
-                  f4controller.clear();
-                  f5controller.clear();
-              },
-              icon: Icon(Icons.add_box, color: theme.buttonTextColor),
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: theme.buttonColor,
-                  surfaceTintColor: theme.cardColor),
-              label: Text(
-                'ADD',
-                style: TextStyle(
-                    fontSize: theme.textSize * 2,
-                    color: theme.buttonTextColor),
+                    f1controller.clear();
+                    f2controller.clear();
+                    f3controller.clear();
+                    f4controller.clear();
+                    f5controller.clear();
+                },
+                icon: Icon(Icons.add_box, color: theme.buttonTextColor),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: theme.buttonColor,
+                    surfaceTintColor: theme.cardColor),
+                label: Text(
+                  'ADD',
+                  style: TextStyle(
+                      fontSize: theme.textSize * 2,
+                      color: theme.buttonTextColor),
+                ),
               ),
             ),
             const SizedBox(height: 10),
@@ -115,7 +117,6 @@ class _AddPageState extends State<AddPage> {
                   Expanded(
                     child: TextFormField(
                         controller: controller,
-                        validator: (value) {},
                         cursorColor: theme.textColor,
                         decoration: InputDecoration(
                           border: const OutlineInputBorder(),

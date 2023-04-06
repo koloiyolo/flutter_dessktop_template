@@ -10,7 +10,7 @@ var thememode = ThemeMode.light;
 var textSize = 17.0; // small
 //navRail indexes
 
-Widget page = HomePage(); //tmp page variable for Navigation rail
+Widget page = const HomePage(); //tmp page variable for Navigation rail
 
 //lightMode
 //var lightModeSeed = const Color.fromARGB(255, 189, 82, 39);

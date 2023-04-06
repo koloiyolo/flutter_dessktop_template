@@ -17,8 +17,8 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: theme.backgroundColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
+        padding: const EdgeInsets.all(30),
         children: [
           Card(
             color: theme.cardColor,
@@ -28,12 +28,12 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Add test obj"),
+                  optionText('Add test object'),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: theme.buttonColor),
-                    onPressed: () { myList.add(Something('XD', 'DX', 'XD', 'DX', 'XD'));},
+                    onPressed: () { myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));},
                     child: buildButtonText("Toggle"),
                   ),
                 ],
@@ -49,7 +49,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Option 2"),
+                  optionText('Option 2'),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -70,7 +70,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Option 3"),
+                  optionText('Option 3'),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -91,7 +91,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                 buildText("Option 4"),
+                 optionText('Option 4'),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -112,7 +112,7 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Option 5"),
+                  optionText('Option 5'),
                   const SizedBox(width: 30),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -133,36 +133,33 @@ class _SettingsPageState extends State<SettingsPage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  buildText("Font Size"),
+                  optionText('Font Size'),
                   const SizedBox(width: 30),
-                  Row(
-                    children: [
-                      ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: theme.buttonColor), //<====== Working on that rn
-                        onPressed: () {
-                          setState(() {
-                            theme.textSize--;
-                          });
-                          ;
-                        },
-                        icon:
-                            Icon(Icons.remove, color: theme.buttonTextColor),
-                        label: buildButtonText("Minus"),
-                      ),
-                      const SizedBox(width: 5),
-                      ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: theme.buttonColor),
-                        onPressed: () {
-                          setState(() {
-                            theme.textSize++;
-                          });
-                        },
-                        icon: Icon(Icons.add, color: theme.buttonTextColor),
-                        label: buildButtonText("Plus"),
-                      ),
-                    ],
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: theme.buttonColor),
+                    onPressed: () {
+                      setState(() {
+                        theme.textSize--;
+                      });
+                      ;
+                    },
+                    icon:
+                        Icon(Icons.remove, color: theme.buttonTextColor),
+                    label: buildButtonText("Minus"),
+                  ),
+                  const SizedBox(width: 5),
+                  const SizedBox(width: 10),
+                  ElevatedButton.icon(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: theme.buttonColor),
+                    onPressed: () {
+                      setState(() {
+                        theme.textSize++;
+                      });
+                    },
+                    icon: Icon(Icons.add, color: theme.buttonTextColor),
+                    label: buildButtonText("Plus"),
                   ),
                 ],
               ),
@@ -172,7 +169,17 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
     );
   }
+
+
 }
+Expanded optionText(String text) => Expanded(
+  child: Row(
+    children: [
+      const SizedBox(width: 350),
+      buildText(text),
+    ],
+  ));
+
   Text buildButtonText(String text) {
     return Text(text,
                       style: TextStyle(
