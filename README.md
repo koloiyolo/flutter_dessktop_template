@@ -8,7 +8,7 @@ You can use that as template for an application and implement your functionaliti
 
 ## Light Mode
 
-![image](https://user-images.githubusercontent.com/23361087/230462411-200db9d9-dd51-4dff-81dc-b45101074909.png)
+![image](https://user-images.githubusercontent.com/23361087/230468900-13705884-2dd4-4868-836c-34b512dcda36.png)
 
 
 ## Dark Mode
