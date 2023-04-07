@@ -33,7 +33,14 @@ class _SettingsPageState extends State<SettingsPage> {
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         backgroundColor: theme.buttonColor),
-                    onPressed: () { myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));},
+                    onPressed: () { 
+                      myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));
+                      showDialog(context: context, builder: (context){
+                        return const AlertDialog(
+                          content: Text("Test Object created successfully")
+                        );
+                      });
+                      },
                     child: buildButtonText('Add'),
                   ),
                 ],

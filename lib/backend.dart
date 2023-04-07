@@ -38,6 +38,6 @@ class Something {
   String getField4(){return field4;}  
 }
 
-List<Something> myList = [Something('Object1', 'bjsbfj', 'fsfbhjs', 'fsbvf', 'fsb')];
+List<Something> myList = [];
 
 

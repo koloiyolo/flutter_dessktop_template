@@ -16,15 +16,27 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: theme.backgroundColor,
-      body: ListView.builder(
-          padding: const EdgeInsets.all(30),
-          itemCount: myList.length,
-          itemBuilder: (BuildContext context, index) {
-            return listNode(index, context);
-          }),
-    );
+    if (myList.isNotEmpty){
+      return Scaffold(
+        backgroundColor: theme.backgroundColor,
+        body: ListView.builder(
+            padding: const EdgeInsets.all(30),
+            itemCount: myList.length,
+            itemBuilder: (BuildContext context, index) {
+              return listNode(index, context);
+            }),
+      );
+    } else {
+      return Scaffold(
+        backgroundColor: theme.backgroundColor,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(child: Text('Object list is empty', style: TextStyle(color: theme.textColor, fontSize: theme.textSize*1.2),))
+          ],
+        )
+      );
+    }
   }
   Column listNode(int index, BuildContext context) {
   return Column(
