@@ -65,14 +65,16 @@ class _AddPageState extends State<AddPage> {
                     myList.add(Something(nameField, f1, f2, f3, f4));
                   showDialog(context: context, builder: (context){
                     return AlertDialog(
-                      content: Text('Object $nameField has been created'),
+                      backgroundColor: theme.backgroundColor,
+                      content: buildText('Object $nameField has been created'),
                     );
                   });
                   }else{
                     showDialog(context: context, builder: (context){
-                      return const AlertDialog(
+                      return AlertDialog(
+                        backgroundColor: theme.backgroundColor,
                         alignment: Alignment.center,
-                        content: Text('Please fill the form')
+                        content: buildText('Please fill the form')
                       );
                     }
                     );
@@ -129,4 +131,8 @@ class _AddPageState extends State<AddPage> {
                 ],
               ));
   }
+}
+Text buildText(String text) {
+  return Text(text,
+      style: TextStyle(fontSize: theme.textSize, color: theme.textColor));
 }

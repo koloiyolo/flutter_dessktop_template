@@ -36,8 +36,9 @@ class _SettingsPageState extends State<SettingsPage> {
                     onPressed: () { 
                       myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));
                       showDialog(context: context, builder: (context){
-                        return const AlertDialog(
-                          content: Text("Test Object created successfully")
+                        return AlertDialog(
+                          backgroundColor: theme.backgroundColor,
+                            content: buildText("Test Object created successfully")
                         );
                       });
                       },
