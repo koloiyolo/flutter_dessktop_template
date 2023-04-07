@@ -34,7 +34,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: theme.buttonColor),
                     onPressed: () { 
-                      myList.add(Something('Object${myList.length+2}', 'DX', 'XD', 'DX', 'XD'));
+                      myList.add(Something('Object${myList.length+1}', 'DX', 'XD', 'DX', 'XD'));
                       showDialog(context: context, builder: (context){
                         return AlertDialog(
                           backgroundColor: theme.backgroundColor,
@@ -148,7 +148,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         backgroundColor: theme.buttonColor),
                     onPressed: () {
                       setState(() {
-                        theme.textSize--;
+                        theme.fontSize--;
                       });
                       ;
                     },
@@ -162,7 +162,7 @@ class _SettingsPageState extends State<SettingsPage> {
                         backgroundColor: theme.buttonColor),
                     onPressed: () {
                       setState(() {
-                        theme.textSize++;
+                        theme.fontSize++;
                       });
                     },
                     icon: Icon(Icons.add, color: theme.buttonTextColor),
@@ -190,14 +190,14 @@ Expanded optionText(String text) => Expanded(
   Text buildButtonText(String text) {
     return Text(text,
                       style: TextStyle(
-                          fontSize: theme.textSize,
+                          fontSize: theme.fontSize,
                           color: theme.buttonTextColor));
   }
 
   Text buildText(String text) {
     return Text(text,
                     style: TextStyle(
-                        fontSize: theme.textSize,
+                        fontSize: theme.fontSize,
                         color: theme.textColor));
   }
 

@@ -34,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                 'Object list is empty',
                 style: TextStyle(
-                    color: theme.textColor, fontSize: theme.textSize * 1.2),
+                    color: theme.textColor, fontSize: theme.fontSize * 1.2),
               ))
             ],
           ));
@@ -96,10 +96,10 @@ class _HomePageState extends State<HomePage> {
 
 Text buildText(String text) {
   return Text(text,
-      style: TextStyle(fontSize: theme.textSize, color: theme.textColor));
+      style: TextStyle(fontSize: theme.fontSize, color: theme.textColor));
 }
 
 Text buildButtonText(String text) {
   return Text(text,
-      style: TextStyle(fontSize: theme.textSize, color: theme.buttonTextColor));
+      style: TextStyle(fontSize: theme.fontSize, color: theme.buttonTextColor));
 }

@@ -7,7 +7,7 @@ import 'package:flutter_dessktop_template/home.dart';
 
 //LightMode
 var thememode = ThemeMode.light;
-var textSize = 17.0; // small
+var fontSize = 17.0; // small
 //navRail indexes
 
 Widget page = const HomePage(); //tmp page variable for Navigation rail

@@ -92,7 +92,7 @@ class _AddPageState extends State<AddPage> {
                 label: Text(
                   'Add',
                   style: TextStyle(
-                      fontSize: theme.textSize * 2,
+                      fontSize: theme.fontSize * 2,
                       color: theme.buttonTextColor),
                 ),
               ),
@@ -114,7 +114,7 @@ class _AddPageState extends State<AddPage> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: theme.textColor,
-                            fontSize: theme.textSize)),
+                            fontSize: theme.fontSize)),
                   ),
                   Expanded(
                     child: TextFormField(
@@ -125,7 +125,7 @@ class _AddPageState extends State<AddPage> {
                           fillColor: theme.textColor,
                         ),
                         style: TextStyle(
-                            fontSize: theme.textSize,
+                            fontSize: theme.fontSize,
                             color: theme.textColor)),
                   )
                 ],
@@ -134,5 +134,5 @@ class _AddPageState extends State<AddPage> {
 }
 Text buildText(String text) {
   return Text(text,
-      style: TextStyle(fontSize: theme.textSize, color: theme.textColor));
+      style: TextStyle(fontSize: theme.fontSize, color: theme.textColor));
 }
