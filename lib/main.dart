@@ -79,7 +79,6 @@ class _NavBarState extends State<NavBar> {
             darkLightModeIcon = const Icon(Icons.dark_mode);
             darkLightModeText = const Text('Dark Mode');
             darkModeToggle = 0;
-
             theme.applyLightTheme();
           } 
         
